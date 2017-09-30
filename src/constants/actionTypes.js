@@ -1,0 +1,3 @@
+export const RECEIVE_MOVIES = "RECEIVE_MOVIES";
+
+export const REQUEST_MOVIES = "REQUEST_MOVIES";
