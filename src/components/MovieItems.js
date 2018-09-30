@@ -9,7 +9,7 @@ const MovieList = ({ movie }) => {
   return (
     <div >
       <Card>
-        <CardImg top width="100%" src={backdropImg + movie.backdrop_path} alt="Card image cap" />
+        <CardImg top width="35%" src={backdropImg + movie.poster_path} alt="Card image cap" />
         <CardBlock>
           <CardTitle>{movie.original_title}</CardTitle>
           <CardSubtitle>
