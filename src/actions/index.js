@@ -1,15 +1,21 @@
 
 import * as types from '../constants/actionTypes';
 import tmdb from '../api/tmdb'
-const url = `https://api.themoviedb.org/3/discover/movie?page=1&sort_by=popularity.desc&language=en-U`;
+//const url = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&language=en-U&page=`;
+const url = `https://api.themoviedb.org/3/discover/movie?`;
 
-const receviceMoives = json => ({
-    type: types.RECEIVE_MOVIES,
-    movies: json
+const requestMoives = json => ({
+  type: types.REQUEST_MOVIES,
+  movies: json
 })
 
-export function getAllMovies() {
-    return function (dispatch) {
-      tmdb.get(url,dispatch,receviceMoives)
-    }
+// const receiveMoives = json => ({
+//   type: types.RECEIVE_MOVIES,
+//   movies: json
+// })
+
+export function getAllMovies(page, sort_by, language) {
+  return function (dispatch) {
+    tmdb.get(url + `sort_by=${sort_by}&language=${language}&page=${page}`, dispatch, requestMoives)
+  }
 }
