@@ -28,18 +28,18 @@ class App extends Component {
           <div>
             <Navbar className="navbar navbar-toggleable-md navbar-inverse bg-inverse bg-faded fixed-top">
               <NavbarToggler right onClick={this.toggle} />
-              <NavbarBrand href="">
+              <NavbarBrand href={process.env.PUBLIC_URL + '/'}>
                 <img src={logo} className="App-logo" alt="logo" />React-TMDb
               </NavbarBrand>
               <Collapse isOpen={this.state.isOpen} navbar>
                 <ul className='nav navbar-nav'>
                   <li>
-                    <Link exact to={'/'} className="nav-link">
+                    <Link exact to={process.env.PUBLIC_URL + '/'} className="nav-link">
                       <span className='glyphicon glyphicon-home'></span> Home
                     </Link>
                   </li>
                   <li>
-                    <Link to={'/moive'} className="nav-link" >
+                    <Link to={process.env.PUBLIC_URL + '/moive'} className="nav-link" >
                       Moive
                     </Link>
                   </li>
@@ -54,8 +54,8 @@ class App extends Component {
           </div>
           <div className="App-intro">
             <Container>
-              <Route exact path="/" component={Home} />
-              <Route path="/moive/:pageIdx?" component={MoiveContainer} />
+              <Route exact path={process.env.PUBLIC_URL + '/'} component={Home} />
+              <Route path={process.env.PUBLIC_URL + '/moive/:pageIdx?'} component={MoiveContainer} />
             </Container>
           </div>
         </div>
