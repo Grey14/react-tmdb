@@ -47,3 +47,8 @@
 .Page-Button {
   float:right;
 }
+
+.Card-Div {
+  padding-top: 10px;
+  /* font-size: large; */
+}

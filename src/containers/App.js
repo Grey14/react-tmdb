@@ -26,11 +26,11 @@ class App extends Component {
       <Router>
         <div>
           <div>
-            <Navbar className="navbar navbar-toggleable-md navbar-inverse bg-inverse bg-faded fixed-top">
-              <NavbarToggler right onClick={this.toggle} />
-              <NavbarBrand href={process.env.PUBLIC_URL + '/'}>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+              <a class="navbar-brand" href={process.env.PUBLIC_URL + '/'}>
                 <img src={logo} className="App-logo" alt="logo" />React-TMDb
-              </NavbarBrand>
+              </a>
+              <NavbarToggler right onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
                 <ul className='nav navbar-nav'>
                   <li>
@@ -50,7 +50,7 @@ class App extends Component {
                   </li>
                 </ul>
               </Collapse>
-            </Navbar>
+            </nav>
           </div>
           <div className="App-intro">
             <Container>

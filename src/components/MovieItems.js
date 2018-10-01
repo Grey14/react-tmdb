@@ -1,24 +1,30 @@
 import React from 'react';
-import { Button, Card, CardImg, CardBlock, CardTitle, CardSubtitle, CardText, Badge } from 'reactstrap';
-
+// import { Button, Card, CardImg, CardBlock, CardTitle, CardSubtitle, CardText, Badge } from 'reactstrap';
+import '../style/App.css';
 let backdropImg = 'https://image.tmdb.org/t/p/w500';
-let posterImg = 'https://image.tmdb.org/t/p/original';
+// let posterImg = 'https://image.tmdb.org/t/p/original';
 
 const MovieList = ({ movie }) => {
-  //console.log(movie);
+  console.log(movie);
   return (
-    <div >
-      <Card>
-        <CardImg top width="35%" src={backdropImg + movie.poster_path} alt="Card image cap" />
-        <CardBlock>
-          <CardTitle>{movie.original_title}</CardTitle>
-          <CardSubtitle>
-            {movie.release_date}
-          </CardSubtitle>
-          {/* <CardText>{movie.overview}</CardText>*/}
-          {/* <Line /> */}
-        </CardBlock>
-      </Card>
+    <div class="Card-Div">
+      <div class="border">
+        <div class="media">
+          <img width="35%" class="mr-3" src={backdropImg + movie.poster_path} alt=""></img>
+          <div class="media-body">
+            <h6 class="mt-0">{movie.title}</h6>          
+            <div class="mb-1 text-muted">{movie.release_date}</div>
+            <p class="card-text mb-auto">
+            {
+              movie.overview.length >= 150 ? movie.overview.substring(0, 150) + "..." : movie.overview
+            } 
+            </p>         
+          </div>
+        </div>
+        <div class="card-footer text-muted">
+          Vote Average : {movie.vote_average}
+        </div>
+      </div>
     </div>
   )
 }
