@@ -39,8 +39,8 @@ class App extends Component {
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + '/moive'} className="nav-link" >
-                      Moive
+                    <Link to={process.env.PUBLIC_URL + '/movie'} className="nav-link" >
+                     Movie
                     </Link>
                   </li>
                   <li>
@@ -55,7 +55,7 @@ class App extends Component {
           <div className="App-intro">
             <Container>
               <Route exact path={process.env.PUBLIC_URL + '/'} component={Home} />
-              <Route path={process.env.PUBLIC_URL + '/moive/:pageIdx?'} component={MoiveContainer} />
+              <Route path={process.env.PUBLIC_URL + '/movie/:pageIdx?'} component={MoiveContainer} />
             </Container>
           </div>
         </div>

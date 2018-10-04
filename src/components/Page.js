@@ -14,11 +14,11 @@ const Page = ({ movie, getAllMovies }) => {
 
       <div className="Page-Button">
         {
-          movie.page === 1 ? "" : <Link className='btn btn-default pull-left' to={process.env.PUBLIC_URL+`/moive/${previousPage}`}>Previous</Link>
+          movie.page === 1 ? "" : <Link className='btn btn-default pull-left' to={process.env.PUBLIC_URL+`/movie/${previousPage}`}>Previous</Link>
         }
         {' '}
         {
-          movie.page === 1000 ? "" : <Link className='btn btn-default pull-right' to={process.env.PUBLIC_URL+`/moive/${nextPage}`}>Next</Link>
+          movie.page === 1000 ? "" : <Link className='btn btn-default pull-right' to={process.env.PUBLIC_URL+`/movie/${nextPage}`}>Next</Link>
         }
         {/* { this.props.isLoading ? <span>Loading...</span> : [] } */}
       </div>

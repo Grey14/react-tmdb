@@ -12,7 +12,7 @@ const Layout = () => (
         </div>
         <div className='col-sm-9'>
           <Route exact path="/" component={Home} />
-          <Route path="/moive/:pageIdx?" component={MoiveContainer} />
+          <Route path="/movie/:pageIdx?" component={MoiveContainer} />
         </div>
       </div>
     </div>

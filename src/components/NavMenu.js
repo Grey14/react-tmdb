@@ -22,7 +22,7 @@ const NavMenu = () => (
             </NavLink>
           </li>
           <li>
-            <NavLink to={'/moive'} activeClassName='active'>
+            <NavLink to={'/movie'} activeClassName='active'>
               <span className='glyphicon glyphicon-education'></span> Moive
             </NavLink>
           </li>
