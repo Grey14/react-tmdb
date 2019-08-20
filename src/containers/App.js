@@ -27,14 +27,14 @@ class App extends Component {
         <div>
           <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-              <a class="navbar-brand" href={process.env.PUBLIC_URL + '/'}>
+              <a className="navbar-brand" href={process.env.PUBLIC_URL + '/'}>
                 <img src={logo} className="App-logo" alt="logo" />React-TMDb
               </a>
               <NavbarToggler right onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
                 <ul className='nav navbar-nav'>
                   <li>
-                    <Link exact to={process.env.PUBLIC_URL + '/'} className="nav-link">
+                    <Link to={process.env.PUBLIC_URL + '/'} className="nav-link">
                       <span className='glyphicon glyphicon-home'></span> Home
                     </Link>
                   </li>
@@ -44,7 +44,7 @@ class App extends Component {
                     </Link>
                   </li>
                   <li>
-                    <NavLink href="https://github.com/Grey14/react-tmdb" activeClassName='active'>
+                    <NavLink href="https://github.com/Grey14/react-tmdb" className='nav-link'>
                       Github
                     </NavLink>
                   </li>

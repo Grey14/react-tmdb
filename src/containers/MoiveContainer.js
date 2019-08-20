@@ -10,13 +10,13 @@ import Page from '../components/Page'
 
 class MoiveContainer extends Component {
   componentDidMount() {
-    console.log("componentDidMount");
+    //console.log("componentDidMount");
     let pageIdx = parseInt(this.props.match.params.pageIdx,10) || 1;
     this.props.getAllMovies(pageIdx, 'popularity.desc', 'en-U');    
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log("componentWillReceiveProps");
+    //console.log("componentWillReceiveProps");
     if (this.props.match.params.pageIdx !== nextProps.match.params.pageIdx) {
       let pageIdx = parseInt(nextProps.match.params.pageIdx,10) || 1;
       this.props.getAllMovies(pageIdx, 'popularity.desc', 'en-U');
@@ -26,22 +26,17 @@ class MoiveContainer extends Component {
 
   render() {
     const { movies, getAllMovies } = this.props;
-    console.log(this.props);
+    //console.log(this.props);
     //const  { movies, isLoading } = state;
-    let movieTemps = {
-      page: 0,
-      results: [],
-      total_pages: 0,
-      total_results: 0
-    }
+    let movieTemps = movies;
 
-    if (!Array.isArray(movies)) {
-      //console.log(movies);
-      movieTemps = movies;
-    }
-
+    // if (!Array.isArray(movies)) {
+    //   //console.log(movies);
+    //   movieTemps = movies;
+    // }    
     return (
       <div>
+        {movieTemps.isLoading ? <span>Loading...</span> : [] }
         <Row>
           {
             movieTemps.results.map((movieItem, idx) => (

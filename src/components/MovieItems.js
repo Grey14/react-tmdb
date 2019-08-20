@@ -5,23 +5,23 @@ let backdropImg = 'https://image.tmdb.org/t/p/w500';
 // let posterImg = 'https://image.tmdb.org/t/p/original';
 
 const MovieList = ({ movie }) => {
-  console.log(movie);
+  //console.log(movie);
   return (
-    <div class="Card-Div">
-      <div class="border">
-        <div class="media">
-          <img width="35%" class="mr-3" src={backdropImg + movie.poster_path} alt=""></img>
-          <div class="media-body">
-            <h6 class="mt-0">{movie.title}</h6>          
-            <div class="mb-1 text-muted">{movie.release_date}</div>
-            <p class="card-text mb-auto">
+    <div className="Card-Div">
+      <div className="border">
+        <div className="media">
+          <img width="35%" className="mr-3" src={backdropImg + movie.poster_path} alt=""></img>
+          <div className="media-body">
+            <h6 className="mt-0">{movie.title}</h6>          
+            <div className="mb-1 text-muted">{movie.release_date}</div>
+            <p className="card-text mb-auto">
             {
               movie.overview.length >= 150 ? movie.overview.substring(0, 150) + "..." : movie.overview
             } 
             </p>         
           </div>
         </div>
-        <div class="card-footer text-muted">
+        <div className="card-footer text-muted">
           Vote Average : {movie.vote_average}
         </div>
       </div>
